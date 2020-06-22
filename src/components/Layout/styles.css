@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Blinker:wght@400;700&display=swap");
+:root {
+  --secondary: #01a6baeb;
+  --primary: #ffa000;
+  --transparency-zero: #0000;
+  --transparency: #000000bf;
+  --black: #1b1919;
+  --white: #fff;
+  --gray: #707072;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  font-size: 14px;
+}
+h1 {
+  font-size: 3rem;
+  line-height: 32px;
+}
+h2 {
+  font-size: 2.7rem;
+  font-weight: 400;
+}
+h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+h4 {
+  font-size: 2rem;
+}
+p,
+a {
+  font-size: 1.2rem;
+}
+
+body,
+input,
+button,
+a {
+  font-family: "Blinker", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  position: relative;
+}
+.background {
+  position: fixed !important;
+  width: 100%;
+  height: 85vh;
+  z-index: -1;
+  opacity: 0.6 !important;
+}
+button {
+  cursor: pointer;
+}
+@media (min-width: 765px) {
+  html {
+    font-size: 16px;
+  }
+  .container {
+    margin-left: 8vw;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 17px;
+  }
+  .background {
+    height: 100vh;
+    opacity: 1 !important;
+  }
+}
