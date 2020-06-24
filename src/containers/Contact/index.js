@@ -1,9 +1,9 @@
 import React from "react";
 
 import Footer from "../../components/Footer";
-import { Container, ContactContent } from "./styles";
+import { Container, ContactContent, Map } from "./styles";
 
-import { FiInstagram, FiPhone } from "react-icons/fi";
+import { FiPhone } from "react-icons/fi";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -18,7 +18,7 @@ const Contact = () => {
             data-sal-easing="ease"
             data-sal-duration="1000"
           >
-            Entre em Contato
+            Solicite seu Orçamento
           </h3>
           <div
             data-sal="slide-up"
@@ -27,17 +27,14 @@ const Contact = () => {
             data-sal-duration="1000"
           >
             <h4>Contato</h4>
-            <a href="tel:(48)3224-1849">
-              <FiPhone /> (48) 3224-1849
+            <a href="tel:(48)3346-8315">
+              <FiPhone /> (48) 3346-8315
             </a>
-            <a href="https://wa.me/5548996979837">
-              <FaWhatsapp /> (48) 99697-9837
+            <a href="https://wa.me/5548996869903">
+              <FaWhatsapp /> (48) 99686-9903
             </a>
-            <a href="https://wa.me/5548999163111">
-              <FaWhatsapp /> (48) 99916-3111
-            </a>
-            <a href="https://www.instagram.com/bazardaschavesecarimbos/">
-              <FiInstagram /> Instagram
+            <a href="https://wa.me/5548996869903">
+              <AiOutlineMail /> contato@onixmarmoresegranitos.com.br
             </a>
           </div>
           <div
@@ -47,9 +44,9 @@ const Contact = () => {
             data-sal-duration="1000"
           >
             <h4>Endereço</h4>
-            <p>Rua. Felipe Schmidt, 80 Centro.</p>
-            <p>Florianópolis – Sc.</p>
-            <p>Cep: 88010-000.</p>
+            <p>Rua. Guilherme Jacobe Buch, 535.</p>
+            <p>São José – Sc.</p>
+            <p>Cep: 88111-220.</p>
           </div>
           <div
             data-sal="slide-up"
@@ -58,11 +55,20 @@ const Contact = () => {
             data-sal-duration="1000"
           >
             <h4>Horário de Funcionamento</h4>
-            <p>Segunda à Sexta: 08:00 – 19:00.</p>
-            <p>Sábado: 09:00 - 13:00.</p>
-            <p>Domingo: Fechado.</p>
+            <p>De Segunda à Sexta: </p>
+            <p>Das 08:00 até 12:00 ~ 13:30 até 18:00.</p>
+            <p>Sábados e Domingos: Fechado.</p>
           </div>
         </ContactContent>
+        <Map>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.6681292721814!2d-48.62931473202338!3d-27.572808381628306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x679523fd659171cb!2s%C3%94nix+Marmores+e+Granitos!5e0!3m2!1spt-BR!2sbr!4v1528209812869"
+            allowfullscreen=""
+            width="100%"
+            height="450"
+            frameborder="0"
+          ></iframe>
+        </Map>
       </Container>
       <Footer />
     </>
