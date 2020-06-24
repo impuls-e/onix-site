@@ -10,7 +10,7 @@ export const AboutContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1350px;
+  max-width: var(--breakpoint-xl);
   margin: 0 auto;
 
   div {

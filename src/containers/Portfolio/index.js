@@ -3,12 +3,12 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 
-import { Container, ServiceContent } from "./styles";
+import { Container, PortfolioContent } from "./styles";
 
-const Services = () => {
+const Portfolio = () => {
   const data = useStaticQuery(graphql`
-    query ServicesQuery {
-      allMdx(filter: { frontmatter: { tag: { eq: "services" } } }) {
+    query Portfoliosuery {
+      allMdx(filter: { frontmatter: { tag: { eq: "portfolios" } } }) {
         edges {
           node {
             id
@@ -29,39 +29,39 @@ const Services = () => {
     }
   `);
 
-  const services = data.allMdx.edges;
+  const portfolios = data.allMdx.edges;
 
   return (
     <>
-      <Container id="services">
-        <ServiceContent>
+      <Container id="portfolios">
+        <PortfolioContent>
           <h3
             data-sal="slide-up"
             data-sal-delay="300"
             data-sal-easing="ease"
             data-sal-duration="1000"
           >
-            Nossos Serviços
+            Siga-nos no Instagram
           </h3>
-          {services.map((service) => (
+          {portfolios.map((portfolio) => (
             <div
               data-sal="slide-up"
               data-sal-delay="300"
               data-sal-easing="ease"
               data-sal-duration="1000"
-              key={service.node.id}
+              key={portfolio.node.id}
             >
               <Img
-                fluid={service.node.frontmatter.imgUrl.childImageSharp.fluid}
-                alt="An image apresentation from current service"
+                fluid={portfolio.node.frontmatter.imgUrl.childImageSharp.fluid}
+                alt="An image apresentation from current portfolio"
               />
-              <h4>{service.node.frontmatter.title}</h4>
-              <p>{service.node.frontmatter.description}</p>
+              <h4>{portfolio.node.frontmatter.title}</h4>
+              <p>{portfolio.node.frontmatter.description}</p>
             </div>
           ))}
-        </ServiceContent>
+        </PortfolioContent>
       </Container>
     </>
   );
 };
-export default Services;
+export default Portfolio;

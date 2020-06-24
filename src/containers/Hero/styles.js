@@ -10,7 +10,7 @@ export const HeroContent = styled.div`
   justify-content: space-between;
   flex-direction: column;
   height: 100%;
-  max-width: 1350px;
+  max-width: var(--breakpoint-xl);
   margin: 0 auto;
 
   @media (min-width: 765px) {

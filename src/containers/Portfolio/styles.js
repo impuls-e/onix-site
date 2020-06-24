@@ -2,20 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   padding: 6vh 4vw;
-  background-image: radial-gradient(
-    circle,
-    #d7d7d7,
-    #d7d7d7 1px,
-    var(--white) 0,
-    var(--white)
-  );
-  background-size: 28px 28px;
+  background-color: var(--white);
   color: var(--black);
 `;
 
-export const ServiceContent = styled.div`
+export const PortfolioContent = styled.div`
   height: 100%;
-  max-width: 1350px;
+  max-width: var(--breakpoint-xl);
   margin: 0 auto;
   display: flex;
   flex-direction: column;

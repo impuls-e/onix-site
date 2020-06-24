@@ -1,16 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Blinker:wght@400;700&display=swap");
 :root {
-  --secondary: #01a6baeb;
-  --primary: #ffa000;
+  --secondary: #fdad32;
+  --primary: #808080;
   --transparency-zero: #0000;
   --transparency: #000000bf;
-  --black: #333333;
+  --black: #222;
   --white: #fff;
   --gray: #808080;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
+  --breakpoint-xl: 1150px;
 }
 * {
   margin: 0;
@@ -21,7 +20,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 html {
-  font-size: 14px;
+  font-size: 13px;
 }
 h1 {
   font-size: 3rem;
@@ -40,15 +39,19 @@ h4 {
 }
 p,
 a {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  color: var(--primary);
 }
 
 body,
 input,
 button,
 a {
-  font-family: "Blinker", sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+a:hover {
+  color: var(--black);
 }
 
 .container {
@@ -65,7 +68,7 @@ button {
 }
 @media (min-width: 765px) {
   html {
-    font-size: 16px;
+    font-size: 15px;
   }
   .container {
     margin-left: 8vw;

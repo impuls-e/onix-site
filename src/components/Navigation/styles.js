@@ -15,21 +15,10 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1350px;
+  max-width: var(--breakpoint-xl);
   margin: 0 auto;
   height: 100%;
 
-  a {
-    text-decoration: none;
-    font-size: 1.8rem;
-    color: var(--gray);
-    font-weight: 900;
-    transition: all 0.4s ease-in-out;
-
-    &:hover {
-      color: var(--black);
-    }
-  }
   ul {
     visibility: hidden;
     opacity: 0;
@@ -54,14 +43,12 @@ export const Header = styled.header`
 
       a {
         padding: 0vh 2vw;
-        font-size: 1.4rem;
         font-weight: 400;
 
         &:after {
           content: "";
           position: absolute;
           bottom: -0.2rem;
-          left: 2vw;
           width: 55%;
           height: 2px;
           background-color: var(--white);
@@ -106,7 +93,7 @@ export const Header = styled.header`
   }
   @media (min-width: 1024px) {
     a {
-      margin-left: 2vw;
+      margin-left: 1vw;
     }
     ul {
       opacity: 1;

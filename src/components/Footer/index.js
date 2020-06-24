@@ -12,7 +12,7 @@ const Footer = () => {
         data-sal-duration="1000"
       >
         <p>
-          © 2020 <span>Bazar das Chaves </span> | Por{" "}
+          © 2020 <span>Onix Mármores e Granitos</span> | Por{" "}
           <a href="https://impuls-e.works">Impuls-e</a>
         </p>
       </FooterContent>

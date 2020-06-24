@@ -3,7 +3,7 @@ const config = require("./data/config");
 module.exports = {
   siteMetadata: {
     title: config.siteTitle,
-    descriptionTemplate: config.descriptionTemplate,
+    descriptionTemplate: config.siteDescription,
     description: config.siteDescription,
     siteUrl: config.siteUrl, // No trailing slash allowed!
     siteImage: config.siteImage, // Path to your image you placed in the 'static' folder
@@ -60,7 +60,14 @@ module.exports = {
         lang: "pt-BR",
       },
     },
-
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Open Sans:400,600"],
+        },
+      },
+    },
     `gatsby-plugin-advanced-sitemap`,
     `gatsby-background-image`,
     {
