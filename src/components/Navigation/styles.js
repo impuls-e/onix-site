@@ -4,11 +4,11 @@ import { Link } from "gatsby";
 
 export const Container = styled.section`
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.14), 0 0 9px 0 rgba(44, 43, 57, 0.16);
-  background-color: var(--transparency-zero);
+  background-color: var(--white);
   position: fixed;
   z-index: 2;
   width: 100vw;
-  height: 10vh;
+  height: 12vh;
 `;
 
 export const Header = styled.header`
@@ -21,14 +21,13 @@ export const Header = styled.header`
 
   a {
     text-decoration: none;
-    font-size: 2.2rem;
-    color: var(--white);
+    font-size: 1.8rem;
+    color: var(--gray);
     font-weight: 900;
-    text-shadow: #000 1px 1px 1px;
     transition: all 0.4s ease-in-out;
 
     &:hover {
-      color: var(--primary);
+      color: var(--black);
     }
   }
   ul {
@@ -36,11 +35,11 @@ export const Header = styled.header`
     opacity: 0;
     display: flex;
     position: absolute;
-    background: var(--black);
+    background: var(--white);
     align-items: flex-end;
     justify-content: center;
     padding: 0 4vw;
-    height: 25vh;
+    height: 26vh;
     width: 100vw;
     transition: opacity 0.8s ease-out, visibility 0.2s ease-out,
       box-shadow 2s ease-in-out;
@@ -51,7 +50,7 @@ export const Header = styled.header`
       align-items: center;
       height: 50px;
       border-radius: 0 5px 5px 0;
-      margin-bottom: 2vh;
+      margin-bottom: 1vh;
 
       a {
         padding: 0vh 2vw;
@@ -179,7 +178,7 @@ export const HamburguerMenu = styled.button`
 
   div {
     width: 40px;
-    border: 2px solid var(--primary);
+    border: 2px solid var(--gray);
     border-radius: 3px;
     transition: all 0.2s ease-in-out;
     transform: rotate(0);
@@ -196,8 +195,8 @@ export const HamburguerMenu = styled.button`
 `;
 
 export const Logo = styled(Link)`
-  width: 48px;
-  height: 48px;
+  width: 110px;
+  height: 8vh;
   margin-left: 4vw;
   display: flex;
 

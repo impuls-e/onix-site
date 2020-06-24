@@ -1,17 +1,17 @@
 const config = {
-  siteTitle: "Bazar das Chaves e Carimbos - Serviços com qualidade e confiança",
+  siteTitle: "Onix Mármores e Granitos - Qualidade e Compromisso",
   descriptionTemplate:
-    "Um chaveiro em Florianópolis com mais de 20 anos de mercado. Fazemos cópias de chaves, carimbos, controles, tags, troca fechaduras, entre outros..",
+    "Uma marmoraria em São José com mais de 20 anos de mercado. Marmores, Granitos, Porcelanato...",
   siteDescription:
-    "Um chaveiro em Florianópolis com mais de 20 anos de mercado. Fazemos cópias de chaves, carimbos, controles, tags, troca fechaduras, entre outros..",
-  siteTitleShort: "BDCC",
+    "Uma marmoraria em São José com mais de 20 anos de mercado. Marmores, Granitos, Porcelanato...",
+  siteTitleShort: "OMG",
   siteRss: "/rss.xml",
-  siteImage: `${__dirname}/src/img/circle-logo.jpeg`,
+  siteImage: `${__dirname}/../src/images/rock-icon.png`,
   siteTwitter: "@impulsewks",
-  googleAnalyticsID: "UA-169891820-1",
+  googleAnalyticsID: "UA-169891820-2",
   themeColor: "#000000",
   backgroundColor: "#000000",
-  siteUrl: "https://bazardaschaves.com.br/",
+  siteUrl: "https://onixmarmoresegranitos.com.br/",
   author: "https://impuls-e.works",
 };
 

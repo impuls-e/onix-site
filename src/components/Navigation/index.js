@@ -19,7 +19,7 @@ const Navigation = () => {
 
   const data = useStaticQuery(graphql`
     query ImgHeader {
-      icon: file(relativePath: { eq: "key-icon.png" }) {
+      icon: file(relativePath: { eq: "logo.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -37,7 +37,6 @@ const Navigation = () => {
             alt="An image apresentation from current project"
           />
         </Logo>
-        <Link>Bazar das Chaves</Link>
         <HamburguerMenu
           onClick={handleClick}
           className={`hamburguermenu ${clickStyle}  `}
@@ -58,7 +57,7 @@ const Navigation = () => {
               to="#services"
               title="Vai para nossos servicos"
             >
-              Serviços
+              Portfólio
             </MenuLink>
           </li>
           <li>

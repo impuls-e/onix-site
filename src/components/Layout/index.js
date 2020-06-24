@@ -15,7 +15,7 @@ export default function Layout({ children }) {
   const { mobileImage, desktopImage } = useStaticQuery(
     graphql`
       query BackgroungImage {
-        mobileImage: file(relativePath: { eq: "background/mobile.png" }) {
+        mobileImage: file(relativePath: { eq: "background/desktop.jpg" }) {
           childImageSharp {
             fluid(quality: 100, maxWidth: 765) {
               ...GatsbyImageSharpFluid_withWebp
@@ -23,7 +23,7 @@ export default function Layout({ children }) {
           }
         }
 
-        desktopImage: file(relativePath: { eq: "background/desktop.png" }) {
+        desktopImage: file(relativePath: { eq: "background/desktop.jpg" }) {
           childImageSharp {
             fluid(quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
