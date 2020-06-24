@@ -6,7 +6,7 @@ export const Container = styled.section`
 `;
 
 export const AboutContent = styled.div`
-  padding: 6vh 4vw;
+  padding: 12vh 4vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,7 +71,6 @@ export const AboutContent = styled.div`
         }
         h3 {
           flex: 1;
-          text-transform: uppercase;
         }
       }
       li + li {

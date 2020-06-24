@@ -4,7 +4,7 @@ export const WhatsButton = styled.div`
   position: fixed;
   width: 60px;
   height: 60px;
-  bottom: 40px;
+  bottom: 15px;
   right: 15px;
   background-color: #25d366;
   color: #fff;
