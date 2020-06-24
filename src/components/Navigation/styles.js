@@ -18,6 +18,7 @@ export const Header = styled.header`
   max-width: var(--breakpoint-xl);
   margin: 0 auto;
   height: 100%;
+  padding: 0 4vw;
 
   ul {
     visibility: hidden;
@@ -27,7 +28,6 @@ export const Header = styled.header`
     background: var(--white);
     align-items: flex-end;
     justify-content: center;
-    padding: 0 4vw;
     height: 26vh;
     width: 100vw;
     transition: opacity 0.8s ease-out, visibility 0.2s ease-out,
@@ -92,9 +92,7 @@ export const Header = styled.header`
     }
   }
   @media (min-width: 1024px) {
-    a {
-      margin-left: 1vw;
-    }
+    padding: 0 4vw;
     ul {
       opacity: 1;
       visibility: visible;
@@ -140,7 +138,6 @@ export const HamburguerMenu = styled.button`
   justify-content: space-evenly;
   width: 48px;
   height: 48px;
-  margin-right: 4vw;
 
   &.click {
     div:nth-child(1) {
@@ -184,7 +181,6 @@ export const HamburguerMenu = styled.button`
 export const Logo = styled(Link)`
   width: 110px;
   height: 8vh;
-  margin-left: 4vw;
   display: flex;
 
   .gatsby-image-wrapper {

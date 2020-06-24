@@ -1,48 +1,113 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  padding: 6vh 4vw;
   color: var(--white);
   background-color: var(--black);
 `;
 
 export const AboutContent = styled.div`
+  padding: 6vh 4vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: var(--breakpoint-xl);
   margin: 0 auto;
 
-  div {
-    h3 {
-      width: 100%;
-      margin-bottom: 4vh;
-      text-align: center;
-    }
-
-    p {
-      margin-bottom: 4vh;
-    }
+  span {
+    width: 50%;
+    height: 1px;
+    box-shadow: 0 5px 5px -5px #99999991;
+    padding-bottom: 2vh;
+    margin-bottom: 6vh;
   }
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    max-width: 580px;
+  }
+
   aside {
     display: flex;
+    flex-direction: column;
 
-    .gatsby-image-wrapper {
-      width: 70vw;
-      opacity: 0.8;
-      max-width: 400px;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 4vh;
+
+      h1 {
+        text-align: center;
+      }
+      span {
+        margin-bottom: 2vh;
+      }
+      p {
+        text-align: center;
+        color: var(--white);
+        margin-bottom: 2vh;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 10vh;
+          height: 10vh;
+          margin-right: 2vw;
+          margin-bottom: 0;
+          border-radius: 50%;
+          background: var(--gray);
+        }
+        h3 {
+          flex: 1;
+          text-transform: uppercase;
+        }
+      }
+      li + li {
+        margin-top: 2vh;
+      }
     }
   }
   @media (min-width: 765px) {
-    flex-direction: row;
-    justify-content: space-between;
-
-    div {
-      width: 48%;
+    h2 {
+      width: 85%;
+      max-width: 700px;
+    }
+    span {
+      width: 30%;
+      margin-bottom: 8vh;
     }
     aside {
-      width: 50%;
-      justify-content: flex-end;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      div {
+        width: 48%;
+        margin-top: 4vh;
+        margin-bottom: 0;
+      }
+      ul {
+        width: 48%;
+
+        li {
+          div {
+            margin-right: 2vw;
+            margin-top: 0vh;
+          }
+        }
+      }
     }
   }
 `;
