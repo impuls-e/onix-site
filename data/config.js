@@ -4,7 +4,7 @@ const config = {
     "Uma marmoraria em São José com mais de 20 anos de mercado. Marmores, Granitos, Porcelanato...",
   siteTitleShort: "OMG",
   siteRss: "/rss.xml",
-  siteImage: `${__dirname}/../src/images/rock-icon.png`,
+  siteImage: `${__dirname}/../src/images/icon.png`,
   siteTwitter: "@impulsewks",
   googleAnalyticsID: "UA-169891820-2",
   themeColor: "#000000",
