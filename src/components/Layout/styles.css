@@ -1,6 +1,6 @@
 :root {
   --secondary: #fdad32;
-  --primary: #808080;
+  --primary: #222;
   --transparency-zero: #0000;
   --transparency: #000000bf;
   --black: #222;
@@ -20,22 +20,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 html {
-  font-size: 13px;
+  font-size: 12px;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 2.2rem;
+  text-transform: uppercase;
   line-height: 32px;
 }
 h2 {
-  font-size: 2.7rem;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 h3 {
-  font-size: 2.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
 }
 h4 {
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 p,
 a {
@@ -68,7 +69,7 @@ button {
 }
 @media (min-width: 765px) {
   html {
-    font-size: 15px;
+    font-size: 13px;
   }
   .container {
     margin-left: 8vw;
@@ -76,6 +77,6 @@ button {
 }
 @media (min-width: 1024px) {
   html {
-    font-size: 17px;
+    font-size: 14px;
   }
 }

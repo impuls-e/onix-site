@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
+import { GiStakeHammer } from "react-icons/gi";
+import { AiOutlineFieldTime, AiOutlineLike } from "react-icons/ai";
 
 import { Container, AboutContent } from "./styles";
 
@@ -22,30 +23,52 @@ const About = () => {
     <>
       <Container id="sobre">
         <AboutContent>
-          <div
+          <h2
             data-sal="slide-up"
             data-sal-delay="200"
             data-sal-easing="ease"
             data-sal-duration="1000"
           >
-            <h3>Sobre Nós</h3>
-            <p>
-              Localizado na Rua Felipe Schmidt, no coração de Florianópolis, o
-              Bazar das Chaves e Carimbos é uma empresa com mais de 20 anos de
-              mercado. Possuímos um atendimento diferenciado e estamos sempre
-              buscando os melhores produtos para o nosso cliente.
-            </p>
-          </div>
+            Profissionais com mais de 20 anos de experiência no mercado de
+            mármores e granitos
+          </h2>
+          <span />
+
           <aside
             data-sal="slide-up"
             data-sal-delay="200"
             data-sal-easing="ease"
             data-sal-duration="1000"
           >
-            <Img
-              fluid={data.file.childImageSharp.fluid}
-              alt="An image apresentation from current project"
-            />
+            <div>
+              <h1>Onix Mármores e Granitos</h1>
+              <span />
+              <p>
+                A Onix Mármores e Granitos iniciou suas atividades em 2017.
+                Apesar de ser uma empresa fundada recentemente, os seus
+                profissionais contam com mais de 20 anos de experiência na área.{" "}
+              </p>
+            </div>
+            <ul>
+              <li>
+                <div>
+                  <GiStakeHammer size={32} />
+                </div>
+                <h3>Qualidade no serviço</h3>
+              </li>
+              <li>
+                <div>
+                  <AiOutlineFieldTime size={32} />
+                </div>
+                <h3>Compromisso com o prazo de entrega</h3>
+              </li>
+              <li>
+                <div>
+                  <AiOutlineLike size={32} />
+                </div>
+                <h3>Garantia de profissionais com experiência na área</h3>
+              </li>
+            </ul>
           </aside>
         </AboutContent>
       </Container>
