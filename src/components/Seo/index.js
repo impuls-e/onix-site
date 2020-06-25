@@ -32,13 +32,13 @@ const SEO = () => (
             {description && (
               <meta property="og:description" content={description} />
             )}
-            {image && <meta property="og:image" content="image" />}
+            {image && <meta property="og:image" content={image} />}
 
             {image && <meta property="og:image:url" content={image} />}
 
             {image && <meta property="og:image:type" content="image/jpeg" />}
             {image && (
-              <meta name="twitter:site" content="@bazardaschaves"></meta>
+              <meta name="twitter:site" content="@onixmarmoresegranitos"></meta>
             )}
             <meta name="twitter:card" content="summary_large_image" />
             {twitterUsername && (
@@ -48,7 +48,12 @@ const SEO = () => (
             {description && (
               <meta name="twitter:description" content={description} />
             )}
-            {image && <meta name="twitter:image" content={image} />}
+            {image && (
+              <meta
+                name="twitter:image"
+                content="https://onixmarmoresegranitos.com.br/static/81576dc5c2dc5048afac8fef36cc8b6e/14b42/logo.jpg"
+              />
+            )}
           </Helmet>
         </>
       );

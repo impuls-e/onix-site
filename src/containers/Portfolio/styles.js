@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   background-color: var(--white);
+  padding-top: 6vh;
   color: var(--black);
 `;
 
 export const PortfolioContent = styled.div`
-  padding: 12vh 4vw;
+  padding: 6vh 4vw;
   height: 100%;
   max-width: var(--breakpoint-xl);
   margin: 0 auto;

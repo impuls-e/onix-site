@@ -80,4 +80,14 @@ button {
   html {
     font-size: 16px;
   }
+  .background {
+    height: 80vh;
+    background-size: contain;
+  }
+}
+@media (min-width: 1350px) {
+  .background {
+    height: 100vh;
+    background-size: cover;
+  }
 }

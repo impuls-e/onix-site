@@ -1,7 +1,7 @@
 const config = {
-  siteTitle: "Onix Mármores e Granitos - Qualidade e Compromisso",
+  siteTitle: "Onix Mármores e Granitos - Qualidade e compromisso",
   siteDescription:
-    "Uma marmoraria em São José com mais de 20 anos de mercado. Marmores, Granitos, Porcelanato...",
+    "Uma marmoraria em São José com profissionais especializados e com mais de 20 anos de mercado. Marmores, Granitos, Porcelanato...",
   siteTitleShort: "OMG",
   siteRss: "/rss.xml",
   siteImage: `${__dirname}/../src/images/icon.png`,
