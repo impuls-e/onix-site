@@ -32,7 +32,12 @@ const SEO = () => (
             {description && (
               <meta property="og:description" content={description} />
             )}
-            {image && <meta property="og:image" content={image} />}
+            {image && (
+              <meta
+                property="og:image"
+                content="https://onixmarmoresegranitos.com.br/static/81576dc5c2dc5048afac8fef36cc8b6e/14b42/logo.jpg"
+              />
+            )}
 
             {image && <meta property="og:image:url" content={image} />}
 
