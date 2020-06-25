@@ -41,7 +41,13 @@ const Portfolio = ({ limit }) => {
             data-sal-easing="ease"
             data-sal-duration="1000"
           >
-            Siga-nos no Instagram @onixmarmoresegranitos
+            Siga-nos no Instagram{" "}
+            <a
+              class="insta"
+              href="https://www.instagram.com/bazardaschavesecarimbos/"
+            >
+              @onixmarmoresegranitos
+            </a>
           </h3>
 
           {portfolios.slice(0, limit).map((portfolio) => (

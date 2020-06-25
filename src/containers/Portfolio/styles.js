@@ -18,6 +18,16 @@ export const PortfolioContent = styled.div`
     margin-bottom: 4vh;
     text-align: center;
   }
+  .insta {
+    color: var(--black);
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: 0.2s all ease-in-out;
+
+    &:hover {
+      color: var(--gray);
+    }
+  }
 
   div {
     display: flex;
