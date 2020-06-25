@@ -182,7 +182,6 @@ export const HamburguerMenu = styled.button`
 
 export const Logo = styled(Link)`
   width: 110px;
-  height: 8vh;
   display: flex;
 
   .gatsby-image-wrapper {
