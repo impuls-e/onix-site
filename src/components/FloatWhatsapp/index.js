@@ -11,7 +11,7 @@ export default function FloatWhatsapp() {
       data-sal-easing="ease"
       data-sal-duration="1000"
     >
-      <a href="https://wa.me/5548996979837" target="_blank">
+      <a href="https://wa.me/5548996869903" target="_blank">
         {" "}
         <FaWhatsapp size={40} />
       </a>
