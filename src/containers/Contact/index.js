@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createRef, useState, useEffect } from "react";
 
 import Footer from "../../components/Footer";
 import { Container, ContactContent, Map } from "./styles";
@@ -8,6 +8,33 @@ import { AiOutlineMail } from "react-icons/ai";
 import { FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
+  const [showVideo, setShowVideo] = useState(false);
+
+  const container = createRef();
+
+  useEffect(() => {
+    const videoObserver = new IntersectionObserver(onVideoIntersection, {
+      rootMargin: "100px 0px",
+      threshold: 0.25,
+    });
+    if (window && "IntersectionObserver" in window) {
+      if (container && container.current) {
+        videoObserver.observe(container.current);
+      }
+    } else {
+      setShowVideo(true);
+    }
+  }, [container]);
+  function onVideoIntersection(entries) {
+    if (!entries || entries.length <= 0) {
+      return;
+    }
+
+    if (entries[0].isIntersecting) {
+      setShowVideo(true);
+      videoObserver.disconnect();
+    }
+  }
   return (
     <>
       <Container id="contato">
@@ -60,14 +87,18 @@ const Contact = () => {
             <p>Sábados e Domingos: Fechado.</p>
           </div>
         </ContactContent>
-        <Map>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.6681292721814!2d-48.62931473202338!3d-27.572808381628306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x679523fd659171cb!2s%C3%94nix+Marmores+e+Granitos!5e0!3m2!1spt-BR!2sbr!4v1528209812869"
-            allowfullscreen=""
-            width="100%"
-            height="450"
-            frameborder="0"
-          ></iframe>
+        <Map ref={container}>
+          {showVideo ? (
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.6681292721814!2d-48.62931473202338!3d-27.572808381628306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x679523fd659171cb!2s%C3%94nix+Marmores+e+Granitos!5e0!3m2!1spt-BR!2sbr!4v1528209812869"
+              allowfullscreen=""
+              width="100%"
+              height="450"
+              frameborder="0"
+            ></iframe>
+          ) : (
+            undefined
+          )}
         </Map>
       </Container>
       <Footer />
