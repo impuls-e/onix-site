@@ -44,9 +44,12 @@ const About = () => {
               <h1>Onix Mármores e Granitos</h1>
               <span />
               <p>
-                A Onix Mármores e Granitos iniciou suas atividades em 2017.
-                Apesar de ser uma empresa fundada recentemente, os seus
-                profissionais contam com mais de 20 anos de experiência na área.{" "}
+                A empresa iniciou suas atividades em 2017 e atende clientes por
+                toda Grande Florianópolis. Apesar de ser uma empresa fundada
+                recentemente, nossos profissionais possuem mais de 20 anos de
+                experiência na área. Com mão de obra qualificada e
+                infraestrutura conseguimos atender diferentes projetos, aliando
+                competência, ética e um ótimo preço.{" "}
               </p>
             </div>
             <ul>

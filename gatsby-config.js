@@ -39,6 +39,14 @@ module.exports = {
         path: `${__dirname}/content/`,
       },
     },
+    {
+      // For development
+      // resolve: `..`,
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `7855732803`,
+      },
+    },
     `gatsby-plugin-mdx`,
 
     {
