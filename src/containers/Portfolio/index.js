@@ -3,23 +3,22 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 
-import { Container, PortfolioContent } from "./styles";
+import { Container, PortfolioContent, Wrapper } from "./styles";
 
 const Portfolio = () => {
   const data = useStaticQuery(graphql`
-    query Portfoliosuery {
-      allMdx(filter: { frontmatter: { tag: { eq: "portfolios" } } }) {
+    query Portfoliosquery {
+      allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 9) {
         edges {
           node {
             id
-            frontmatter {
-              title
-              description
-              imgUrl {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
-                  }
+            likes
+            caption
+            comments
+            localFile {
+              childImageSharp {
+                fluid(quality: 70, maxWidth: 600, maxHeight: 600) {
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
@@ -29,8 +28,7 @@ const Portfolio = () => {
     }
   `);
 
-  const portfolios = data.allMdx.edges;
-
+  const portfolios = data.allInstaNode.edges;
   return (
     <>
       <Container id="portfolios">
@@ -43,6 +41,7 @@ const Portfolio = () => {
           >
             Siga-nos no Instagram
           </h3>
+
           {portfolios.map((portfolio) => (
             <div
               data-sal="slide-up"
@@ -51,12 +50,15 @@ const Portfolio = () => {
               data-sal-duration="1000"
               key={portfolio.node.id}
             >
-              <Img
-                fluid={portfolio.node.frontmatter.imgUrl.childImageSharp.fluid}
-                alt="An image apresentation from current portfolio"
-              />
-              <h4>{portfolio.node.frontmatter.title}</h4>
-              <p>{portfolio.node.frontmatter.description}</p>
+              <a
+                target="_blank"
+                href={`https://www.instagram.com/p/${portfolio.node.id}/`}
+              >
+                <Img
+                  fluid={portfolio.node.localFile.childImageSharp.fluid}
+                  alt="An image apresentation from current portfolio"
+                />
+              </a>
             </div>
           ))}
         </PortfolioContent>
