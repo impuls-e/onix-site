@@ -54,7 +54,7 @@ const Navigation = () => {
           <li>
             <MenuLink
               onClick={handleClick}
-              to="#portfolios"
+              to="/portfolios"
               title="Vai para nossos servicos"
             >
               Portfólio

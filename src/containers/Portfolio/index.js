@@ -2,13 +2,15 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
+import { IoMdHeart } from "react-icons/io";
+import { FaComment } from "react-icons/fa";
 
-import { Container, PortfolioContent, Wrapper } from "./styles";
+import { Container, PortfolioContent, Insta } from "./styles";
 
-const Portfolio = () => {
+const Portfolio = ({ limit }) => {
   const data = useStaticQuery(graphql`
     query Portfoliosquery {
-      allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 9) {
+      allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 12) {
         edges {
           node {
             id
@@ -39,10 +41,10 @@ const Portfolio = () => {
             data-sal-easing="ease"
             data-sal-duration="1000"
           >
-            Siga-nos no Instagram
+            Siga-nos no Instagram @onixmarmoresegranitos
           </h3>
 
-          {portfolios.map((portfolio) => (
+          {portfolios.slice(0, limit).map((portfolio) => (
             <div
               data-sal="slide-up"
               data-sal-delay="300"
@@ -58,7 +60,21 @@ const Portfolio = () => {
                   fluid={portfolio.node.localFile.childImageSharp.fluid}
                   alt="An image apresentation from current portfolio"
                 />
+                <Insta>
+                  <span>
+                    <IoMdHeart />
+                    <strong>{portfolio.node.likes}</strong>
+                  </span>
+
+                  {portfolio.node.comments && (
+                    <span>
+                      <FaComment />
+                      <strong>{portfolio.node.comments}</strong>
+                    </span>
+                  )}
+                </Insta>
               </a>
+              <p>{portfolio.node.caption}</p>
             </div>
           ))}
         </PortfolioContent>

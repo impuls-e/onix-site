@@ -7,7 +7,7 @@ export const Container = styled.section`
   background-color: var(--white);
   position: fixed;
   z-index: 2;
-  width: 100vw;
+  width: 100%;
   height: 12vh;
 `;
 
@@ -33,6 +33,7 @@ export const Header = styled.header`
     transition: opacity 0.8s ease-out, visibility 0.2s ease-out,
       box-shadow 2s ease-in-out;
     z-index: -2;
+    left: 0vw;
 
     li {
       display: flex;
@@ -42,6 +43,7 @@ export const Header = styled.header`
       margin-bottom: 1vh;
 
       a {
+        font-size: 1.2rem;
         padding: 0vh 2vw;
         font-weight: 400;
 
@@ -156,13 +158,13 @@ export const HamburguerMenu = styled.button`
 
   &:hover {
     div {
-      border: 2px solid var(--primary);
+      border: 2px solid var(--gray);
     }
   }
 
   div {
     width: 40px;
-    border: 2px solid var(--gray);
+    border: 2px solid var(--black);
     border-radius: 3px;
     transition: all 0.2s ease-in-out;
     transform: rotate(0);

@@ -9,7 +9,7 @@
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
-  --breakpoint-xl: 1150px;
+  --breakpoint-xl: 1350px;
 }
 * {
   margin: 0;
@@ -20,7 +20,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 html {
-  font-size: 12px;
+  font-size: 14px;
 }
 h1 {
   font-size: 2.2rem;
@@ -70,7 +70,7 @@ button {
 }
 @media (min-width: 765px) {
   html {
-    font-size: 14px;
+    font-size: 15px;
   }
   .container {
     margin-left: 8vw;
