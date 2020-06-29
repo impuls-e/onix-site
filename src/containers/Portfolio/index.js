@@ -1,5 +1,5 @@
 /* eslint-disable graphql/template-strings */
-import React from "react";
+import React, { createRef, useState, useEffect } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import { IoMdHeart } from "react-icons/io";
@@ -31,10 +31,39 @@ const Portfolio = ({ limit }) => {
   `);
 
   const portfolios = data.allInstaNode.edges;
+
+  const [showVideo, setShowVideo] = useState(false);
+
+  const container = createRef();
+
+  const videoObserver = new IntersectionObserver(onVideoIntersection, {
+    rootMargin: "100px 0px",
+    threshold: 0.25,
+  });
+  useEffect(() => {
+    if (window && "IntersectionObserver" in window) {
+      if (container && container.current) {
+        videoObserver.observe(container.current);
+      }
+    } else {
+      setShowVideo(true);
+    }
+  }, [container]);
+  function onVideoIntersection(entries) {
+    if (!entries || entries.length <= 0) {
+      return;
+    }
+
+    if (entries[0].isIntersecting) {
+      setShowVideo(true);
+      videoObserver.disconnect();
+    }
+  }
+
   return (
     <>
       <Container id="portfolios">
-        <PortfolioContent>
+        <PortfolioContent ref={container}>
           <h3
             data-sal="slide-up"
             data-sal-delay="300"
@@ -43,46 +72,41 @@ const Portfolio = ({ limit }) => {
           >
             Siga-nos no Instagram{" "}
             <a
-              class="insta"
+              className="insta"
               href="https://www.instagram.com/bazardaschavesecarimbos/"
             >
               @onixmarmoresegranitos
             </a>
           </h3>
+          {showVideo
+            ? portfolios.slice(0, limit).map((portfolio) => (
+                <div key={portfolio.node.id}>
+                  <a
+                    target="_blank"
+                    href={`https://www.instagram.com/p/${portfolio.node.id}/`}
+                  >
+                    <Img
+                      fluid={portfolio.node.localFile.childImageSharp.fluid}
+                      alt="An image apresentation from current portfolio"
+                    />
+                    <Insta>
+                      <span>
+                        <IoMdHeart />
+                        <strong>{portfolio.node.likes}</strong>
+                      </span>
 
-          {portfolios.slice(0, limit).map((portfolio) => (
-            <div
-              data-sal="slide-up"
-              data-sal-delay="300"
-              data-sal-easing="ease"
-              data-sal-duration="1000"
-              key={portfolio.node.id}
-            >
-              <a
-                target="_blank"
-                href={`https://www.instagram.com/p/${portfolio.node.id}/`}
-              >
-                <Img
-                  fluid={portfolio.node.localFile.childImageSharp.fluid}
-                  alt="An image apresentation from current portfolio"
-                />
-                <Insta>
-                  <span>
-                    <IoMdHeart />
-                    <strong>{portfolio.node.likes}</strong>
-                  </span>
-
-                  {portfolio.node.comments && (
-                    <span>
-                      <FaComment />
-                      <strong>{portfolio.node.comments}</strong>
-                    </span>
-                  )}
-                </Insta>
-              </a>
-              <p>{portfolio.node.caption}</p>
-            </div>
-          ))}
+                      {portfolio.node.comments && (
+                        <span>
+                          <FaComment />
+                          <strong>{portfolio.node.comments}</strong>
+                        </span>
+                      )}
+                    </Insta>
+                  </a>
+                  <p>{portfolio.node.caption}</p>
+                </div>
+              ))
+            : undefined}
         </PortfolioContent>
       </Container>
     </>

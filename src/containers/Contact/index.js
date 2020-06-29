@@ -12,11 +12,11 @@ const Contact = () => {
 
   const container = createRef();
 
+  const videoObserver = new IntersectionObserver(onVideoIntersection, {
+    rootMargin: "100px 0px",
+    threshold: 0.25,
+  });
   useEffect(() => {
-    const videoObserver = new IntersectionObserver(onVideoIntersection, {
-      rootMargin: "100px 0px",
-      threshold: 0.25,
-    });
     if (window && "IntersectionObserver" in window) {
       if (container && container.current) {
         videoObserver.observe(container.current);
@@ -91,10 +91,10 @@ const Contact = () => {
           {showVideo ? (
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.6681292721814!2d-48.62931473202338!3d-27.572808381628306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x679523fd659171cb!2s%C3%94nix+Marmores+e+Granitos!5e0!3m2!1spt-BR!2sbr!4v1528209812869"
-              allowfullscreen=""
+              allowFullScreen=""
               width="100%"
               height="450"
-              frameborder="0"
+              frameBorder="0"
             ></iframe>
           ) : (
             undefined
