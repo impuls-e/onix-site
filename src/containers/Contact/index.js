@@ -12,11 +12,13 @@ const Contact = () => {
 
   const container = createRef();
 
-  const videoObserver = new IntersectionObserver(onVideoIntersection, {
-    rootMargin: "100px 0px",
-    threshold: 0.25,
-  });
+  let videoObserver;
+
   useEffect(() => {
+    videoObserver = new IntersectionObserver(onVideoIntersection, {
+      rootMargin: "100px 0px",
+      threshold: 0.25,
+    });
     if (window && "IntersectionObserver" in window) {
       if (container && container.current) {
         videoObserver.observe(container.current);
