@@ -75,7 +75,7 @@ const Portfolio = ({ limit }) => {
             Siga-nos no Instagram{" "}
             <a
               className="insta"
-              href="https://www.instagram.com/bazardaschavesecarimbos/"
+              href="https://www.instagram.com/onixmarmoresegranitos/"
             >
               @onixmarmoresegranitos
             </a>
